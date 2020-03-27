@@ -9,7 +9,7 @@ steel_raw="raw-data/Sp15_245L_sect-001_group-2-4_bendtest-steel.raw"
 aluminum_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-aluminum.raw"
 
 filename = sys.argv[1]        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
-data = np.loadtxt(filename)   # Attempts to load filename into local variable data.
+data = np.loadtxt(filename,skiprows=32,delimiter=',')   # Attempts to load filename into local variable data.
 
 ## Part 0
 # Figure out what arguments to add to the loadtxt function call
