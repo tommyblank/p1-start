@@ -4,6 +4,7 @@ import sys
 
 tungsten_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-tungsten.raw"
 tungsten2_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-tungsten2.raw"
+tungsten3_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-tungsten3.raw"
 glass_raw="raw-data/Sp15_245L_sect-001_group-1_glass.raw"
 ultem_raw="raw-data/Sp15_245L_sect-001_group-1_ultem.raw"
 steel_raw="raw-data/Sp15_245L_sect-001_group-2-4_bendtest-steel.raw"
@@ -11,7 +12,7 @@ aluminum_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-aluminum.raw"
 aluminum2_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-aluminum2.raw"
 aluminum3_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-aluminum3.raw"
 
-filename = steel_raw        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
+filename = aluminum_raw        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
 data = np.loadtxt(filename,skiprows=32,delimiter=',')
 range=(len(data))
 stress=abs(data[0:, 3])
