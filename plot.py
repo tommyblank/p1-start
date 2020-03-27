@@ -13,6 +13,8 @@ data = np.loadtxt(filename,skiprows=32,delimiter=',')
 x=data[3]*-1
 y=data[7]*-1
 
+plt.title(filename)
+plt.grid(True)
 plt.xlabel('Strain (Ext %)')
 plt.ylabel('Stress (MPa)')
 
