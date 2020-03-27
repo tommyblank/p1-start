@@ -3,6 +3,10 @@ import numpy as np
 import sys
 
 tungsten_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-tungsten.raw"
+glass_raw="raw-data/Sp15_245L_sect-001_group-1_glass.raw"
+ultem_raw="raw-data/Sp15_245L_sect-001_group-1_ultem.raw"
+steel_raw="raw-data/Sp15_245L_sect-001_group-2-4_bendtest-steel.raw"
+aluminum_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-aluminum.raw"
 
 filename = sys.argv[1]        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
 data = np.loadtxt(filename)   # Attempts to load filename into local variable data.
@@ -43,4 +47,4 @@ data = np.loadtxt(filename)   # Attempts to load filename into local variable da
 # your .gitignore file so you're not committing the figures to your repository.
 
 
-some help to make it like the second.
+
