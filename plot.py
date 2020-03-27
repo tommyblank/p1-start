@@ -8,11 +8,11 @@ ultem_raw="raw-data/Sp15_245L_sect-001_group-1_ultem.raw"
 steel_raw="raw-data/Sp15_245L_sect-001_group-2-4_bendtest-steel.raw"
 aluminum_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-aluminum.raw"
 
-filename = glass_raw        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
+filename = aluminum_raw        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
 data = np.loadtxt(filename,skiprows=32,delimiter=',')
 range=(len(data))
-stress=data[0:, 3]*-1
-strain=data[0:, 7]*-1
+stress=abs(data[0:, 3])
+strain=abs(data[0:, 7])
 
 slope=np.polyfit(strain,stress,1)
 poly1d_youngs=np.poly1d(slope)
