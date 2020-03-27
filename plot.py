@@ -30,13 +30,17 @@ plt.grid(True)
 plt.xlabel('Strain (Ext %)')
 plt.ylabel('Stress (MPa)')
 
+#Saving Graph
+plt.savefig(filename+'.pdf')
+
+#Printing Graph
 plt.legend(loc='best')
 plt.show()   # Attempts to load filename into local variable data.
 
 #Printing Young's Modulus
 print("The Young's Modulus of ")
 print(filename)
-print('is')
+print('=')
 print(m1)
 print('MPa')
 
