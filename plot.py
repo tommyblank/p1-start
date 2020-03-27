@@ -13,20 +13,26 @@ aluminum2_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-aluminum2.raw"
 aluminum3_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-aluminum3.raw"
 
 filename = aluminum_raw        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
+#Plotting Stress vs Strain
 data = np.loadtxt(filename,skiprows=32,delimiter=',')
 range=(len(data))
 stress=abs(data[0:, 3])
 strain=abs(data[0:, 7])
+plt.plot(strain, stress,'k-', linestyle='solid', label='Stress vs. Strain')
 
-slope=np.polyfit(strain,stress,1)
-poly1d_youngs=np.poly1d(slope)
-fig, ax=plt.plot(strain,stress,'b',strain,poly1d_youngs(strain),'--k')
+#Plotting Linear fit
+m1,b1=np.polyfit(strain,stress,1)
+reg=b1+m1*strain
+linearf=np.poly1d(m1,b1)
+plt.plot(strain,reg,'g--',linestyle='dashed',label='Linear Fit')
 
+#Labeling graph
 plt.title(filename, loc='center')
 plt.grid(True)
 plt.xlabel('Strain (Ext %)')
 plt.ylabel('Stress (MPa)')
 
+plt.legend(loc='best')
 plt.show()   # Attempts to load filename into local variable data.
 
 
