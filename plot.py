@@ -10,12 +10,12 @@ aluminum_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-aluminum.raw"
 
 filename = glass_raw        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
 data = np.loadtxt(filename,skiprows=32,delimiter=',')
-x=data[1]*-1
-y=data[1]*-1
+stress=data[:,3]
+strain=data[:,7]
 
-slope=np.polyfit(x,y,1)
+slope=np.polyfit(stress,strain,1)
 poly1d_youngs=np.poly1d(slope)
-fig, ax=plt.plot(x,y,'b',x,poly1d_youngs(x),'--k')
+fig, ax=plt.plot(stress,strain,'b',stress,poly1d_youngs(stress),'--k')
 
 plt.title(filename)
 plt.grid(True)
