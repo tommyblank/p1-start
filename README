@@ -1,0 +1,26 @@
+My code is reliant on a linux or Mac based terminals which can be used by downloading a VPN and MobaXterm. Boise State's bascottie computers have all of which and can be used in the MEC building.
+
+The software needed is Cisco Anyconnect which allows you to use the VPN and MobaXterm.
+
+My code can be run by using the code: python plot.py.
+To change what material is graphed you will need to go into the plot.py file.
+Use the command: "vim plot.py" then on line 15 there is a line that starts with "filename=".
+Edit the material name after the equals sign to change what is graphed.
+For example: change aluminum_raw to tungsten2_raw
+The list of what you can change is:
+-tungsten_raw
+-tunsten2_raw
+-tunsten3_raw
+-glass_raw
+-ultem_raw
+-steel_raw
+-aluminum_raw
+-aluminum2_raw
+-aluminum3_raw
+
+When the code "python plot.py" is run in the terminal, a graph will pop up that has the Stress vs Strain curve and a green dashed line that has the average slope of the entire curve.
+The Young's Modulus is displayed after the graph is closed in the terminal window.
+
+Trials and Tribulations:
+The hardest part of this project was just trying to do specific tasks without knowing the actual commands needed to do so. What I mean by that is that I could not find out how to copy a file into another file and then modify the copy to be the specific specimen I needed.
+I only had a couple aha moments. Most of which were when I was learning how to plot the data. Realizing which lines were unnecessary and which lines could be condensed were big #NailedIt moments for me.
