@@ -3,6 +3,7 @@ import numpy as np
 import sys
 
 tungsten_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-tungsten.raw"
+tungsten2_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-tungsten2.raw"
 glass_raw="raw-data/Sp15_245L_sect-001_group-1_glass.raw"
 ultem_raw="raw-data/Sp15_245L_sect-001_group-1_ultem.raw"
 steel_raw="raw-data/Sp15_245L_sect-001_group-2-4_bendtest-steel.raw"
