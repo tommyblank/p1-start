@@ -22,9 +22,7 @@ plt.plot(strain, stress,'k-', linestyle='solid', label='Stress vs. Strain')
 
 #Plotting Linear fit
 m1,b1=np.polyfit(strain,stress,1)
-reg=b1+m1*strain
-linearf=np.poly1d(m1,b1)
-plt.plot(strain,reg,'g--',linestyle='dashed',label='Linear Fit')
+plt.plot(strain,strain*m1+b1,'g--',linestyle='dashed',label='Linear Fit')
 
 #Labeling graph
 plt.title(filename, loc='center')
