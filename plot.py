@@ -8,17 +8,20 @@ ultem_raw="raw-data/Sp15_245L_sect-001_group-1_ultem.raw"
 steel_raw="raw-data/Sp15_245L_sect-001_group-2-4_bendtest-steel.raw"
 aluminum_raw="raw-data/Sp15_245L_sec-001_group-01_bendtest-aluminum.raw"
 
-filename = aluminum_raw        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
+filename = glass_raw        # Stores ARG1 in filename, as in: $ python plot.py ARG1 ARG2 
 data = np.loadtxt(filename,skiprows=32,delimiter=',')
-x=data[3]*-1
-y=data[7]*-1
+x=data[1]*-1
+y=data[1]*-1
+
+slope=np.polyfit(x,y,1)
+poly1d_youngs=np.poly1d(slope)
+fig, ax=plt.plot(x,y,'b',x,poly1d_youngs(x),'--k')
 
 plt.title(filename)
 plt.grid(True)
 plt.xlabel('Strain (Ext %)')
 plt.ylabel('Stress (MPa)')
 
-plt.plot()
 plt.show()   # Attempts to load filename into local variable data.
 
 ## Part 0
