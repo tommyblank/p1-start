@@ -35,7 +35,12 @@ plt.ylabel('Stress (MPa)')
 plt.legend(loc='best')
 plt.show()   # Attempts to load filename into local variable data.
 
-
+#Printing Young's Modulus
+print("The Young's Modulus of ")
+print(filename)
+print('is')
+print(m1)
+print('MPa')
 
 ## Part 0
 # Figure out what arguments to add to the loadtxt function call
