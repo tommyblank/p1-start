@@ -12,8 +12,12 @@ filename = aluminum_raw        # Stores ARG1 in filename, as in: $ python plot.p
 data = np.loadtxt(filename,skiprows=32,delimiter=',')
 x=data[3]*-1
 y=data[7]*-1
+
 plt.plot()
-plt.show()   # Attempts to load filename into local variable data.
+plt.show()
+
+plt.xlabel('Strain (Ext %)')
+plt.ylabel('Stress (MPa)')   # Attempts to load filename into local variable data.
 
 ## Part 0
 # Figure out what arguments to add to the loadtxt function call
