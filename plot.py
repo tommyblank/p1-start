@@ -80,4 +80,7 @@ print('MPa')
 # your .gitignore file so you're not committing the figures to your repository.
 
 
-
+#Well I tried my very best, and that's all anyone can really ask for.
+#I just wish I could figure out how to get the linear fit to be over the right area.
+#I was looking through everyone files, and out of the ones I could understand,
+#No one could figure it out. But I just may be dumb and did not read any of them right.
