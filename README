@@ -24,3 +24,6 @@ The Young's Modulus is displayed after the graph is closed in the terminal windo
 Trials and Tribulations:
 The hardest part of this project was just trying to do specific tasks without knowing the actual commands needed to do so. What I mean by that is that I could not find out how to copy a file into another file and then modify the copy to be the specific specimen I needed.
 I only had a couple aha moments. Most of which were when I was learning how to plot the data. Realizing which lines were unnecessary and which lines could be condensed were big #NailedIt moments for me.
+The one thing I think I do not have is the linear fit over the correct area.
+Nobody seems to have it from what I understand so I don't feel dumb.
+I just wish I could have gotten all the points and criteria for this project.
